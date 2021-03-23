@@ -708,10 +708,24 @@ section {
 }
 
 .about .icon-boxes h3 {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 700;
   color: #010483;
   margin-bottom: 15px;
+}
+
+.about .icon-boxes h5 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #010483;
+  margin-bottom: 15px;
+}
+
+.about .icon-boxes h4 {
+  font-size: 26;
+  font-weight: 700;
+  color: #010483;
+  margin-bottom: auto;
 }
 
 .about .icon-box {
@@ -767,7 +781,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about.png") center center no-repeat;
+  background: url("../img/about.gif") center center no-repeat;
   background-size: contain;
   min-height: 300px;
 }
