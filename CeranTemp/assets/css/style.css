@@ -1590,6 +1590,8 @@ section {
 
 #footer .footer-top .footer-links {
   margin-bottom: 30px;
+  margin-right: 50px;
+  margin-left: 100px;
 }
 
 #footer .footer-top .footer-links ul {
