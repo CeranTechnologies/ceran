@@ -524,7 +524,7 @@
         </div>
         <div class="row" data-aos="fade-left">
           <div class="col-lg-4 col-md-6">
-            <div class="team">
+            <div class="team tilt" >
               <div class="team-avatar">
                 <img class="w-100" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
               </div>
@@ -570,7 +570,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="team">
+            <div class="team tilt">
               <div class="team-avatar">
                 <img class="w-100" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
               </div>
@@ -616,7 +616,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="team">
+            <div class="team tilt">
               <div class="team-avatar">
                 <img class="w-100" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
               </div>
@@ -662,7 +662,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="team last" >
+            <div class="team last tilt" >
               <div class="team-avatar">
                 <img class="w-100" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
               </div>
@@ -708,7 +708,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="team last lasta">
+            <div class="team last lasta tilt">
               <div class="team-avatar">
                 <img class="w-100" src="https://bootdey.com/img/Content/avatar/avatar2.png"  alt="">
               </div>
@@ -1089,7 +1089,16 @@
   }
 }
   </script>
-
+<script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".tilt"), {
+		max: 25,
+		speed: 400
+	});
+	
+	//It also supports NodeList
+	VanillaTilt.init(document.querySelectorAll(".tilt"));
+</script>
 </body>
 
 </html>
