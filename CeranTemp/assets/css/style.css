@@ -1121,6 +1121,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   width: auto;
+  transition:all 1s ease-in-out;
 }
 .last{
   width: 100%;
@@ -1137,6 +1138,7 @@ section {
 .team .team-content-inner {
   background-color: #ffffff;
   padding: 20px 20px;
+
   width: 100%;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
@@ -1144,14 +1146,6 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.team .team-content-inner .team-social {
-  margin-left: auto;
-}
-
-.team .team-content-inner .team-social .nav .nav-link {
-  padding-top: 0;
-  padding-bottom: 0;
-}
 
 .team .team-content-inner .team-contact {
   opacity: 0;
@@ -1160,6 +1154,10 @@ section {
   left: 20px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in;
+}
+.team .team-content-inner .team-contact:hover a:hover {
+  color: #00249b;
+  transition: all 0.2s ease-in;
 }
 
 .team .team-content-inner:hover {
@@ -1191,16 +1189,8 @@ section {
   bottom: 20px;
 }
 
-.team .team-content-inner .team-contact:hover .nav .nav-link {
-  color: #ffffff;
-}
-
-.team .team-content-inner:hover .team-contact .nav .nav-link:hover {
-  color: #000000;
-}
-
 .team .team-content-inner:hover .team-social .nav .nav-link {
-  color: #ffffff;
+  color: #fffffff6;
 }
 
 .team .team-content-inner .team-social .nav .nav-link:hover {
@@ -1227,48 +1217,6 @@ h5{
   color: #00249b;
 }
 
-.team-02 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.team-02 .team-avatar {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 50%;
-  flex: 0 50%;
-}
-
-.team-02 .team-content {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 50%;
-  flex: 0 50%;
-}
-
-.team-02 .team-content-inner {
-  padding: 0px;
-}
-
-.team-02 .team-content-inner .team-contact {
-  margin-top: 20px;
-}
-
-.team-02 .team-content-inner .team-contact .nav .nav-link {
-  color: #2d3037;
-  padding: 5px;
-}
-
-.team-02 .team-content-inner .team-contact .nav .nav-link:hover {
-  color: #00249b;
-}
-
-.team-02 .team-content-inner .team-desc {
-  color: #2d3037;
-}
-
 .social a.text-muted:hover {
   color: #00249b !important;
 }
@@ -1283,10 +1231,18 @@ h5{
     padding: 10px;
   }
 }
+@media (max-width: 320px){
+  .last{
+    margin-left: auto;
+    width: auto;
+    padding: 5px;
+  }
+}
 @media (max-width: 768px){
-  .lasta{
-    margin-left: 50%;
-    width: 100%;
+
+  .last{
+    margin-left: auto;
+    width: auto;
     padding: 5px;
   }
 }
@@ -1296,24 +1252,11 @@ h5{
     width: auto;
     padding: 5px;
   }
-}
-
-.team .member .social {
-  margin-top: 10px;
-}
-
-.team .member .social a {
-  transition: color 0.3s;
-  color: #01036f;
-}
-
-.team .member .social a:hover {
-  color: #ffc000;
-}
-
-.team .member .social i {
-  font-size: 16px;
-  margin: 0 2px;
+  .last{
+    margin-left: auto;
+    width: auto;
+    padding: 5px;
+  }
 }
 
 /*--------------------------------------------------------------
