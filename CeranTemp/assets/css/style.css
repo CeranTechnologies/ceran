@@ -490,6 +490,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
   }
 }
+.who-we-are-tab > ul li {
+  font-size: 14px;
+  margin: 0 auto;
+}
+.who-we-are-tab ul > li > a {
+  padding-bottom: 10px;
+}
+.who-we-are-tab .tab-content {
+  margin-top: 20px;
+}
 
 @-webkit-keyframes up-down {
   0% {
@@ -703,6 +713,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+/*Added Css for about us {mission&vision}*/
 .about {
   padding: 40px 0 0 0;
 }
@@ -786,6 +797,41 @@ section {
   min-height: 300px;
 }
 
+.who-we-are-tab > ul li {
+  display: table;
+  font-size: 20px;
+  margin: 0 36px;
+  font-weight: 800;
+}
+
+.who-we-are-tab ul > li.active > a, .who-we-are-tab ul > li.active > a:hover, .who-we-are-tab ul > li.active > a:focus {
+  border-color: transparent transparent #010483;
+  border-width: 2px;
+  color: #010483;
+}
+.who-we-are-tab ul > li > a:hover, .who-we-are-tab ul > li > a:focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #010483;
+}
+.who-we-are-tab ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.who-we-are-tab ul > li > a {
+  border-width: 2px;
+  padding-bottom: 20px;
+}
+.who-we-are-tab .tab-content {
+  margin-top: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: justify;
+}
 .about .play-btn {
   width: 94px;
   height: 94px;
