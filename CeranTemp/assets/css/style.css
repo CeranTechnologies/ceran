@@ -1166,8 +1166,6 @@ section {
   border-radius: 20px;
   transition: all 0.3s ease-in;
   padding: 20px 20px 90px;
-  animation: shake 2s;
-  animation-iteration-count: infinite;
 }
 button{
   margin: 5px;
