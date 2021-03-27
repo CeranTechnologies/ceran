@@ -1300,6 +1300,22 @@ h5{
     height: 38px
   }
 }
+@media (max-width: 998px){
+
+  .last{
+    margin-left: auto;
+    width: auto;
+    padding: 5px;
+  }
+}
+@media (max-width: 918px){
+
+  .last{
+    margin-left: auto;
+    width: auto;
+    padding: 9px;
+  }
+}
 @media (max-width: 768px){
 
   .last{
