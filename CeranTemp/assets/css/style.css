@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #ffc000;
-  border-top-color: #d2f9eb;
+  border-top-color: #eeb406;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top i:hover {
-  background: #2be4a2;
+  background: #eeb406;
   color: #fff;
 }
 
