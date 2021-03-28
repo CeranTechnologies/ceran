@@ -1136,7 +1136,7 @@ section {
 }
 .team .team-content-inner {
   background-color: #ffffffa8;
-  border: 1px solid rgba(255, 255, 255, 0.822);
+  /* border: 1px solid rgba(255, 255, 255, 0.822); */
   padding: 20px 20px;
   width: 100%;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
@@ -1178,7 +1178,7 @@ button{
   color: #fff;
   font-size: 15px;
   border: none;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   border-radius: 50%;
   background: linear-gradient(145deg, #d6d6d6, #ffffff);
   box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff
@@ -1202,10 +1202,10 @@ button{
 .fa-linkedin:hover{
   color: #000000
 }
-.fa-google {
-  color: #dc4e41
+.fa-github {
+  color: #6e5494
 }
-.fa-google:hover{
+.fa-github:hover{
   color: #000000
 }
 .fa-twitter {
@@ -1216,11 +1216,11 @@ button{
 }
 .social-buttons{
   width: 100%;
-  height: 100px;
-  float: left;
+  /* height: 100px; */
+  /* float: left; */
 }
 .team .team-content-inner .team-info{
-  float: left;
+  /* float: left; */
 }
 .team .team-content-inner:hover .team-contact {
   opacity: 1;
@@ -1236,7 +1236,7 @@ button{
 }
 
 .team .team-info .avatar-name {
-  color: #ffbf00f6;
+  color: #00249b;
 }
 .team .team-content-inner:hover .team-info .avatar-name{
   color: #fffffff6;
@@ -1248,7 +1248,7 @@ button{
 }
 
 h5{
-  font-size:medium;
+  font-size:large;
 }
 
 .team-content-inner .team-info .team-position {
@@ -1269,13 +1269,13 @@ h5{
     padding: 10px;
   }
   .team-content-inner{
-    height: 250px;
+    /* height: 250px; */
     width: 100%;
   }
   .social-buttons{
     width: 100%;
     margin: 5px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
 }
 @media (max-width: 320px){
@@ -1289,13 +1289,13 @@ h5{
     transition: all 0.5s ease-in;
   }
   .team-content-inner{
-    height: 250px;
+    height: 110px;
     width: 100%;
   }
   .social-buttons{
     width: 100%;
     margin: 5px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
   .neo-button {
     width: 38px;
