@@ -481,7 +481,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
   #hero .hero-img img {
-    max-width: 75%;
+    max-width: 50%;
   }
   #hero h1 {
     font-size: 28px;
