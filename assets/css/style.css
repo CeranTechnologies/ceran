@@ -1279,9 +1279,9 @@ button{
   /* height: 100px; */
   /* float: left; */
 }
-.team .team-content-inner .team-info{
-  /* float: left; */
-}
+/* .team .team-content-inner .team-info{
+  float: left;
+} */
 .team .team-content-inner:hover .team-contact {
   opacity: 1;
   bottom: 20px;
