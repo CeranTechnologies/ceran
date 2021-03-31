@@ -32,7 +32,7 @@
 
         $('html, body').animate({
           scrollTop: scrollto
-        }, 500, 'easeInOutExpo');
+        }, 1500, 'easeInOutExpo');
 
         if ($(this).parents('.nav-menu, .mobile-nav').length) {
           $('.nav-menu .active, .mobile-nav .active').removeClass('active');
@@ -178,12 +178,36 @@
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
-      once: false,
+      once: true,
       mirror: false
     });
   }
   $(window).on('load', function() {
     aos_init();
   });
+
+      $('#recipeCarousel').carousel({
+    interval: 30000
+  })
+
+  // Team Carousel 
+  $('.carousel .carousel-item').each(function(){
+      var minPerSlide = 5;
+      var next = $(this).next();
+      if (!next.length) {
+      next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+      
+      for (var i=0;i<minPerSlide;i++) {
+          next=next.next();
+          if (!next.length) {
+            next = $(this).siblings(':first');
+          }
+          
+          next.children(':first-child').clone().appendTo($(this));
+        }
+  });
+
 
 })(jQuery);
