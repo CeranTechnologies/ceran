@@ -178,7 +178,7 @@
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
-      once: true,
+      once: false,
       mirror: false
     });
   }
@@ -187,7 +187,7 @@
   });
 
       $('#recipeCarousel').carousel({
-    interval: 30000
+    interval: 10000
   })
 
   // Team Carousel 
