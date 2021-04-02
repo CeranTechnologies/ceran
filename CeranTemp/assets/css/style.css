@@ -1380,6 +1380,10 @@ section {
   background: #fff;
 }
 
+.link{
+  color: #0205a1;
+}
+
 .contact .info i {
   font-size: 20px;
   color: #3f43fd;

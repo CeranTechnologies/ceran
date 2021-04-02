@@ -26,6 +26,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!--Send mail with SMTP-->
+  <script src="https://smtpjs.com/v3/smtp.js"></script> 
 </head>
 
 <body>
@@ -757,13 +760,13 @@
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <a href="mailto:cerantech@gmail.com"> cerantech@gmail.com</a>
+                <a href="mailto:cerantech@gmail.com" class="link"> cerantech@gmail.com</a>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Call:</h4>
-                <a href="tel:+233558183012"> +233558183012</a>
+                <a href="tel:+233558183012" class="link"> +233558183012</a>
               </div>
 
             </div>
@@ -796,8 +799,24 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><input type="button" value="Send Mail" onclick="sendMail"></div>
             </form>
+
+            <script>
+              function sendMail(){
+                Email.send({
+                Host : "smtp.gmail.com",
+                Username : "username",
+                Password : "password",
+                To : 'cerantech@gmail.com',
+                From : "you@isp.com",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+              }
+            </script>
 
           </div>
 
@@ -863,7 +882,7 @@
         &copy; Copyright <strong><span>Ceran Technologies</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href="https://cerantechnologies.com/">Ceran Technologies</a>
+        Designed by <a href="index.html">Ceran Technologies</a>
       </div>
     </div>
   </footer><!-- End Footer -->
