@@ -408,7 +408,8 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  background: url("../img/hero-bg.webp");
+  /* background: url("../img/hero-bg.webp"); */
+  background: url("https://res.cloudinary.com/doex0avo3/image/upload/v1617538985/ceran/o8eerhpyazusetl2b9hg.webp");
   position: relative;
   padding: 120px 0 0 0;
 }
@@ -802,7 +803,8 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about.webp") center center no-repeat;
+  /* background: url("../img/about.webp") center center no-repeat; */
+  background: url("https://res.cloudinary.com/doex0avo3/image/upload/v1617538985/ceran/v0dbgnftxad7c2nrl9dy.webp") center center no-repeat;
   background-size: contain;
   min-height: 300px;
 }
@@ -1099,6 +1101,7 @@ section {
 .testimonials {
   padding: 80px 0;
   background: url("../img/cta-bg.webp") no-repeat;
+  background: url("https://res.cloudinary.com/doex0avo3/image/upload/v1617538986/ceran/ytimhmv4i5xvc9cetjdg.webp") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1224,7 +1227,7 @@ section {
 .team .team-content-inner {
   background-color: #ffffffa8;
   /* border: 1px solid rgba(255, 255, 255, 0.822); */
-  padding: 20px 20px;
+  padding: 20px 7px;
   width: 100%;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
