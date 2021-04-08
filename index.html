@@ -897,7 +897,9 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div id="alertMessage"></div>
+
+            <form action="forms/contact.php" id="my-form" method="post" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -913,7 +915,7 @@
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -921,7 +923,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" onclick="send(event)">Send Message</button></div>
             </form>
 
           </div>
@@ -1006,27 +1008,28 @@
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   
   <!-- Text disappear  -->
   <script>
-    function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+      function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-}
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
   </script>
 <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
 <script type="text/javascript">
@@ -1038,6 +1041,47 @@
 	//It also supports NodeList
 	VanillaTilt.init(document.querySelectorAll(".tilt"));
 </script>
+
+  <!-- SMTP MAIL  -->
+  <script>
+    function send(event){
+      var x = document.forms["my-form"]["name" , "email", "message"].value;
+                if (x == "") {
+                    document.getElementById('alertMessage').innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                                            <strong>Please fill in all inputs</strong>
+                                                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>`
+                    return false;
+                }
+        event.preventDefault();
+        Email.send({
+          Host : "smtp.google.com",
+          Username : "cerantech@gmail.com",
+          Password : "0DE9B3993EEAB426F1E17E189005B860DA73",
+          To : 'cerantech@gmail.com',
+          From : document.getElementById('email').value,
+          Subject : document.getElementById('subject').value,
+          Body : "Name : " + document.getElementById('name').value + "<br>Message: " + document.getElementById('message').value 
+      }).then(
+        message => alert(message)
+
+        
+      );
+      $('#my-form').find('input:text, textarea').val('');
+      $('#email').val('');
+
+                document.getElementById('alertMessage').innerHTML = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Thank you for your message!</strong> We will get back to you as soon as possible.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>`
+    }
+      
+  </script>
+
 </body>
 
 </html> 
