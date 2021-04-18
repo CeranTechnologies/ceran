@@ -1023,11 +1023,9 @@
           From : document.getElementById('email').value,
           Subject : document.getElementById('subject').value,
           Body : "Name : " + document.getElementById('name').value + "<br><br>Message: " + document.getElementById('message').value 
-      }).then(
-        message => alert(message)
+      })
 
-        
-      );
+      
       $('#my-form').find('input:text, textarea').val('');
       $('#email').val('');
 
